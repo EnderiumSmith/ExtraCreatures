@@ -1,0 +1,16 @@
+[
+{
+  "modid": "extracreatures",
+  "name": "Extra Creatures",
+  "description": "Adds more mobs. Most of of them can be...lethal.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["EnderiumSmith"],
+  "credits": "EnderiumSmith(author)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
