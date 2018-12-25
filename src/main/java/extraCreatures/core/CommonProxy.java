@@ -3,6 +3,7 @@ package extraCreatures.core;
 import java.io.File;
 
 import extraCreatures.entity.EntityManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -19,7 +20,8 @@ public class CommonProxy {
 		EntityManager.init();
 	}
 	public void init(FMLInitializationEvent event){
-		
+		if(Config.aprilFools)
+			MinecraftForge.EVENT_BUS.register(new FartEventHandler());
 	}
 	public void postInit(FMLPostInitializationEvent event){
 		EntityManager.initSpawn();

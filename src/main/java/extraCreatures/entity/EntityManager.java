@@ -8,6 +8,8 @@ import extraCreatures.core.Config;
 import extraCreatures.model.RenderBeaverDuck;
 import extraCreatures.model.RenderBombardierBeetle;
 import extraCreatures.model.RenderFireWhirl;
+import extraCreatures.model.RenderForbiddenFruit;
+import extraCreatures.model.RenderGhastlyBoat;
 import extraCreatures.model.RenderMegaMoose;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
@@ -26,11 +28,14 @@ public class EntityManager {
 		EntityRegistry.registerModEntity(new ResourceLocation(ExtraCreatures.MODID, "bomb_beetle"), EntityBombardierBeetle.class, "bombardier_beetle", 2, ExtraCreatures.INSTANCE, 64, 3, true, 0x000000, 0xffa500);
 		EntityRegistry.registerModEntity(new ResourceLocation(ExtraCreatures.MODID, "beaver_duck"), EntityBeaverDuck.class, "beaver_duck", 3, ExtraCreatures.INSTANCE, 64, 3, true, 0x310C0C, 0xffa500);
 		EntityRegistry.registerModEntity(new ResourceLocation(ExtraCreatures.MODID, "megamoose"), EntityMegaMoose.class, "saber_moose", 4, ExtraCreatures.INSTANCE, 64, 3, true, 0x310C0C, 0xD8C37F);
+		EntityRegistry.registerModEntity(new ResourceLocation(ExtraCreatures.MODID, "forbidden_fruit"), EntityForbiddenFruit.class, "forbidden_fruit", 5, ExtraCreatures.INSTANCE, 64, 3, false, 0x008000, 0xff0000);
+		//EntityRegistry.registerModEntity(new ResourceLocation(ExtraCreatures.MODID, "ghast_boat"), EntityGhastlyBoat.class, "ghast_boat", 5, ExtraCreatures.INSTANCE, 64, 3, true, 0x210808, 0x008000);
 		
 		LootTableList.register(EntityFireWhirl.LOOT);
 		LootTableList.register(EntityBombardierBeetle.LOOT);
 		LootTableList.register(EntityBeaverDuck.LOOT);
 		LootTableList.register(EntityMegaMoose.LOOT);
+		//LootTableList.register(EntityGhastlyBoat.LOOT);
 	}
 	public static void initSpawn(){
 		Set<Biome> jungle=new HashSet<Biome>(BiomeDictionary.getBiomes(Type.HOT));
@@ -55,5 +60,7 @@ public class EntityManager {
 		RenderingRegistry.registerEntityRenderingHandler(EntityBombardierBeetle.class, RenderBombardierBeetle.FACTORY);
 		RenderingRegistry.registerEntityRenderingHandler(EntityBeaverDuck.class, RenderBeaverDuck.FACTORY);
 		RenderingRegistry.registerEntityRenderingHandler(EntityMegaMoose.class, RenderMegaMoose.FACTORY);
+		RenderingRegistry.registerEntityRenderingHandler(EntityForbiddenFruit.class, RenderForbiddenFruit.FACTORY);
+		//RenderingRegistry.registerEntityRenderingHandler(EntityGhastlyBoat.class, RenderGhastlyBoat.FACTORY);
 	}
 }

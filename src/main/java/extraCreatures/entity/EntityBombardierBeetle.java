@@ -156,7 +156,7 @@ public class EntityBombardierBeetle extends EntityCreature{
 	    	super.damageEntity(damageSrc, damageAmount);
 	    	Entity attacker=damageSrc.getTrueSource();
 	    	if(attacker!=null&&this.isEntityAlive()){
-	    		if(this.getDistanceToEntity(attacker)<6F){
+	    		if(this.getDistance(attacker)<6F){
 	    			this.world.createExplosion(this, this.posX, this.posY, this.posZ, 4, false);
 	    		}
 	    	}
@@ -165,7 +165,7 @@ public class EntityBombardierBeetle extends EntityCreature{
     
     @Override
     public boolean isOnLadder() {
-    	return this.isCollidedHorizontally;
+    	return this.collidedHorizontally;
     }
     
     @Override
